@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="Boton">Abrir Imagen</button>
+    <button id="BotonFacts">Ver dato</button>
+    <div id="DivFact">
+        <h1 id="Fact">Hola</h1>
+    </div>
+    
+    <img id="ImagenEpica" >
+    <script>
+        document.getElementById('Boton').addEventListener('click',function(){
+            HacerPeticion();
+        });
+        function HacerPeticion() {
+            var Variable = "https://cataas.com"
+            //document.getElementById('ImagenEpica').src = "https://cataas.com/cat/gif";
+            fetch("https://cataas.com//cat/gif?json=true")
+        .then( respuesta => respuesta.json())
+        .then( datos => document.getElementById('ImagenEpica').src = Variable + datos.url )//
+        }
+            
+        function HacerFacts(){
+            fetch("https://meowfacts.herokuapp.com/")
+        .then( respuesta => respuesta.json())
+        .then( datos => document.getElementById('Fact').textContent = datos.data  )//
+        }
+        
+        document.getElementById('BotonFacts').addEventListener('click',function(){
+            HacerFacts();
+        });
+
+        
+        
+    </script>
+</body>
+</html>
