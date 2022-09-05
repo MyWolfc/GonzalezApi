@@ -3,7 +3,7 @@
 ## *Metodos Y Codigos De Repuesta* ##
 
 
-![IMAGEN FINAL](https://c.tenor.com/CgGUXc-LDc4AAAAM/hacker-pc.gif)
+![IMAGEN FINAL](https://andaluciagame.andaluciainformacion.es/wp-content/uploads/2019/01/hacker-1200x675.jpg)
 
 
 **NOMBRE DEL ALUMNO:**  JUAN EDUARDO GONZALEZ LEYVA
