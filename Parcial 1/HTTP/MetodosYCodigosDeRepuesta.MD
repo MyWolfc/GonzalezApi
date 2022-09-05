@@ -3,7 +3,7 @@
 ## *Metodos Y Codigos De Repuesta* ##
 
 
-![IMAGEN FINAL](https://c.tenor.com/PMITaIPBRBkAAAAC/hack-pc.gif)
+![IMAGEN INICIAL](https://c.tenor.com/PMITaIPBRBkAAAAC/hack-pc.gif)
 
 
 **NOMBRE DEL ALUMNO:**  JUAN EDUARDO GONZALEZ LEYVA
@@ -46,5 +46,7 @@ _Los códigos de estado de respuesta HTTP indican si se ha completado satisfacto
 | 400 | Esta respuesta significa que el servidor no pudo interpretar la solicitud dada una sintaxis inválida. |
 | 500 | El servidor ha encontrado una situación que no sabe cómo manejarla. |
 
+
+![IMAGENFINAL](https://c.tenor.com/Lzr7afFB7xUAAAAd/microsoft-hackathon-hackathon.gif)
 
 
