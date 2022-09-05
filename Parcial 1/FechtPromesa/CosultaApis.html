@@ -74,6 +74,7 @@
         }
             
         function HacerFacts(){
+          //XD
             fetch("https://meowfacts.herokuapp.com/")
             .then( respuesta => respuesta.json())
             .then( datos => document.getElementById('Fact').textContent = datos.data  )//
