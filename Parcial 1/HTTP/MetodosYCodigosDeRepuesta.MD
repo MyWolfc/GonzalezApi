@@ -3,7 +3,8 @@
 ## *Metodos Y Codigos De Repuesta* ##
 
 
-![Texto de prueba](https://utel.edu.mx/blog/wp-content/uploads/2014/02/shutterstock_148972376.jpg)
+![IMAGEN FINAL](https://www.tepic.tecnm.mx/images/carreras/carrera_sistemas.jpg)
+
 
 **NOMBRE DEL ALUMNO:**  JUAN EDUARDO GONZALEZ LEYVA
 
