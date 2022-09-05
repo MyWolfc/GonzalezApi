@@ -3,7 +3,7 @@
 ## *Metodos Y Codigos De Repuesta* ##
 
 
-![IMAGEN FINAL](https://www.tepic.tecnm.mx/images/carreras/carrera_sistemas.jpg)
+![IMAGEN FINAL](https://c.tenor.com/CgGUXc-LDc4AAAAM/hacker-pc.gif)
 
 
 **NOMBRE DEL ALUMNO:**  JUAN EDUARDO GONZALEZ LEYVA
