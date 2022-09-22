@@ -1,0 +1,7 @@
+{
+    "Usuario":{
+        "1":{"Nombre": "Juan" ,"Edad":"21" ,"Carrera":"Sistemas"},
+        "2":{"Nombre": "Eduardo" ,"Edad":"22" ,"Carrera":"Mecatronica"},
+        "3":{"Nombre": "Pedro" ,"Edad":"23" ,"Carrera":"Eletronica"}
+    }
+}
