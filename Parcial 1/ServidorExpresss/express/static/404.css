@@ -1,4 +1,3 @@
-html,
 body {
   margin: 0;
   padding: 0;
@@ -251,67 +250,6 @@ svg#picklerick .st3 {
 
 svg#picklerick .st4 {
   fill: #e5f8d3;
-}
-
-@-webkit-keyframes swipecut {
-  0% {
-  }
-
-  100% {
-    transform: translateX(calc(100vw + 300px));
-  }
-}
-
-@-webkit-keyframes loboff1 {
-  0% {
-  }
-
-  100% {
-    transform: translate(0px, 3px) rotate(27deg);
-  }
-}
-
-@-webkit-keyframes loboff2 {
-  0% {
-  }
-
-  100% {
-    transform: translate(10px, -27px) rotate(27deg);
-  }
-}
-
-@-webkit-keyframes loboff3 {
-  0% {
-  }
-
-  100% {
-    transform: translate(20px, -50px) rotate(28deg);
-  }
-}
-
-@-webkit-keyframes popup {
-  0% {
-  }
-
-  100% {
-    transform: translateY(-200px);
-  }
-}
-
-@media only screen and (max-height: 420px) {
-    .svgcontainer svg#fourohfour {
-    height: 180px;
-    }
-    .topconvo{
-        font-size: 25px;
-    }
-    .bottomconvo{
-        font-size: 13px;
-    }
-    svg#picklerick {
-        bottom: -420px;
-        right: 10vw;
-    }
 }
 
 @media only screen and (max-width: 600px) { 
