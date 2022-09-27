@@ -1,9 +1,20 @@
 const express = require('express');
 var fs = require('fs');
+const cors = require('cors');
+
 var morgan = require('morgan');
 var path = require('path');
+//const cadenas = require('./cadena2')
+
+
+
+
+//aqui solo traemos los metodos que queremos en especificos
+const {pasarmayusculas,quitarespacios} = require('./cadena2')
 const app = express();
 
+
+app.use(cors({origin:"http://localhost"}))
 app.use(express.text())
 app.use(express.json())
 
@@ -41,12 +52,21 @@ app.post('/', (req, res) => {
 
 app.post('/Textito',(req,res)=>{
     console.log(req.body)
-    let may = req.body.toUpperCase()
+    /*let may = req.body.toUpperCase()
     let sinesp = req.body.trim()
-    let Longi = req.body.length
+    let Longi = req.body.length*/
+
+    //Estos se utilizan cuando utilizamos el modulo cadena.js
+    //let may = cadenas.pasarmayusculas(req.body);
+    //let sinesp = cadenas.quitarespacios(req.body);
+    //let Longi = cadenas.Longitud(req.body);
+
+    //Aqui solo nos traemos las Constatntes con funcion flecha que estan aqui como se ve en la linea 6
+    let may = pasarmayusculas(req.body);
+    let sinesp = quitarespacios(req.body);
     res.json ({ Mayusculas: may,
-    SinEspacios :sinesp,
-    Longitud: Longi
+    SinEspacios :sinesp//,
+    //Longitud: Longi
     })
 })
 
