@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModuloESMi</title>
+</head>
+<body>
+    <label for="Cadena">Ingrese la Cadena</label>
+    <input  id ="Cadena"  type="text">
+    <button id="Mayusculas">MAYUSCULAS</button>
+    <button id="SinE">Sin espacios</button>
+    <button id="Longitud">Longitud</button>
+    <input id="Resultado" type="text" >
+    
+    
+    <script type="module">
+        //import {pasarmayusculas,quitarespacios} from './Moduloesm';
+        document.getElementById("Mayusculas").addEventListener("click",function(){
+            console.log("Si jala");
+
+            import('./Moduloesm').then(function(Modulo){
+                document.getElementById("Resultado").value = "";
+                let cadenaM = Modulo.pasarmayusculas(document.getElementById("Cadena").value);
+            console.log(cadenaM);
+            document.getElementById("Resultado").value = cadenaM;
+
+            })
+            //let cadena = document.getElementById("Cadena").value;
+            
+        })
+        document.getElementById("SinE").addEventListener("click",function(){
+            import('./Moduloesm').then(function(Modulo){
+                document.getElementById("Resultado").value = "";
+                let cadena = document.getElementById("Cadena").value;
+                let cadenasin = Modulo.quitarespacios(cadena);
+
+                console.log(cadenasin);
+                document.getElementById("Resultado").value = cadenasin;
+
+            })
+            
+        })
+        document.getElementById("Longitud").addEventListener("click",function(){
+        
+        import('./Moduloesm').then(function(Modulo){
+            document.getElementById("Resultado").value = "";
+
+            let cadena = document.getElementById("Cadena").value;
+            let cadenaLong = Modulo.Longitud(cadena);
+            console.log(cadenaLong);
+            document.getElementById("Resultado").value = cadenaLong;
+
+        })
+    })
+    </script>
+
+<!--<<script type="module">
+    
+    import * as FuncionEpica from './Moduloesm';
+    document.getElementById("Mayusculas").addEventListener("click",function(){
+        console.log("Si jala");
+        document.getElementById("Resultado").value = "";
+        let cadena = document.getElementById("Cadena").value;
+        let cadenaM = FuncionEpica.pasarmayusculas(cadena);
+        console.log(cadenaM);
+        document.getElementById("Resultado").value = cadenaM;
+
+        
+    })
+
+    document.getElementById("SinE").addEventListener("click",function(){
+        document.getElementById("Resultado").value = "";
+
+        let cadena = document.getElementById("Cadena").value;
+        let cadenasin = FuncionEpica.quitarespacios(cadena);
+        console.log(cadenasin);
+        document.getElementById("Resultado").value = cadenasin;
+
+    })
+    document.getElementById("Longitud").addEventListener("click",function(){
+        document.getElementById("Resultado").value = "";
+
+        let cadena = document.getElementById("Cadena").value;
+        let cadenaLong = FuncionEpica.Longitud(cadena);
+        console.log(cadenaLong);
+        document.getElementById("Resultado").value = cadenaLong;
+
+    })
+
+</script>-->
+</body>
+</html>

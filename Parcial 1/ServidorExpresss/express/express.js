@@ -4,6 +4,9 @@ const cors = require('cors');
 
 var morgan = require('morgan');
 var path = require('path');
+
+
+
 //const cadenas = require('./cadena2')
 
 
@@ -12,6 +15,8 @@ var path = require('path');
 //aqui solo traemos los metodos que queremos en especificos
 const {pasarmayusculas,quitarespacios} = require('./cadena2')
 const app = express();
+
+
 
 
 app.use(cors({origin:"http://localhost"}))
@@ -26,15 +31,19 @@ var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {
 app.use(morgan('combined', { stream: accessLogStream }))
 
 app.use((req,res,next)=>{
-    console.log("Primera funcion procesando.....")
+    
+
     next()
+    console.log("Primera funcion procesando.....")
+    //next()
 },(req,res,next)=>{
     console.log("Segunda funcion procesando......")
     next()
 })
 
-app.get('/', (req, res) => {
-    //res.send('Servidor Express contestando')
+app.get('/', (req, res,next) => {
+    res.send('Servidor Express contestando')
+   
     res.sendFile('./static/index.html',{root:__dirname},(err)=>{console.log('Archivo enviado')})
 
 })
