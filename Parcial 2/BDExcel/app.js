@@ -7,18 +7,16 @@ app.use(express.text())
 app.use(express.json())
 const { Console } = require('console');
 var connection = mysql.createConnection({
-  //se queda igual
+
   host : 'localhost',
   user : 'root',
-  //la contraseña de tu conexio
   password : 'password',
-  //el nombre dee la base deee datos
   database : 'n19100190'
+
 });
 
 app.delete('/Eliminar/id/:ID',(req, res) =>{
   console.log(req.params)
-  //            aqui cambias la tabla por la que tengas en tu base datos
     connection.query(`delete from jugadores where idID = ${req.params.ID}`, function (error, results, fields) {
       if (error) throw error;
       console.log(results);
