@@ -49,7 +49,7 @@ app.get('/', (req, res,next) => {
 })
 
 app.get('/Mayusculas/:cadena',(req,res)=>{
-    console.log(req.params)
+    console.log(req.params.cadena)
     res.send(req.params)
 })
 
