@@ -15,16 +15,16 @@ var connection = mysql.createConnection({
 
 });
 
-app.delete('/Eliminar/id/:ID',(req, res) =>{
+app.delete('/Jugadores/id/:id',(req, res) =>{
   console.log(req.params)
-    connection.query(`delete from jugadores where idID = ${req.params.ID}`, function (error, results, fields) {
+    connection.query(`delete from jugadores where idID = ${req.params.id}`, function (error, results, fields) {
       if (error) throw error;
       console.log(results);
       res.send(results);  
   });
 })
 
-app.put('/Modificar',(req,res)=>{
+app.put('/Jugadores',(req,res)=>{
   console.log(req.body)
   connection.query(`update jugadores set NombreCom = '${req.body.NombreCom}',NombreDelJuego = '${req.body.NombreDelJuego}',Rango = '${req.body.Rango}',Edad = ${req.body.Edad},Pais = '${req.body.Pais}' where idID =${req.body.id}`, function (error, results, fields) {
     if (error) throw error;
@@ -35,9 +35,9 @@ app.put('/Modificar',(req,res)=>{
 
   });
 })
-app.post('/Alta',(req,res)=>{
+app.post('/Jugadores',(req,res)=>{
   console.log(req.body)
-  connection.query(`insert jugadores(NombreCom,NombreDelJuego,Rango,Edad,Pais) values('${req.body.NombreCom}','${req.body.NombreDelJuego}','${req.body.Rango}',${req.body.Edad},'${req.body.Pais}')`, function (error, results, fields) {
+  connection.query(`insert into jugadores(NombreCom,NombreDelJuego,Rango,Edad,Pais) values('${req.body.NombreCom}','${req.body.NombreDelJuego}','${req.body.Rango}',${req.body.Edad},'${req.body.Pais}')`, function (error, results, fields) {
     if (error) throw error;
     console.log(results);
     res.send(results);  
@@ -49,13 +49,25 @@ app.post('/Alta',(req,res)=>{
 
 
 
-app.get('/Consulta/id/:ID',(req, res) =>{
+app.get('/Jugadores/id/:ID',(req, res) =>{
   //cuadno lo manda a traves del header
   console.log(req.params)
   //cuando trae el body!
   //console.log(req.query.ID);
   //                                aqui cambias la tabla por la que tengas en tu base datos
     connection.query(`SELECT * FROM jugadores where idID = ${req.params.ID}`, function (error, results, fields) {
+      if (error) throw error;
+      console.log(results);
+      res.send(results);  
+  });
+})
+app.get('/Jugadores',(req, res) =>{
+  //cuadno lo manda a traves del header
+  console.log(req.params)
+  //cuando trae el body!
+  //console.log(req.query.ID);
+  //                                aqui cambias la tabla por la que tengas en tu base datos
+    connection.query(`SELECT * FROM jugadores`, function (error, results, fields) {
       if (error) throw error;
       console.log(results);
       res.send(results);  
