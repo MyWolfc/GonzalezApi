@@ -83,7 +83,7 @@ router.post('/', async (req,res)=>{
 
 /**
  * @swagger
- * /Jugadores/ID:
+ * /Jugadores/:ID:
  *  get:
  *   description: Informacion sobre un jugador en especifico
  *   responses:
